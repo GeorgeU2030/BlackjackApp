@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'SFPro';
+    src: url('@/assets/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SFPro', sans-serif;
+}
+
+@theme {  
+    --color-apple-red: #FF3B30; 
+    --color-apple-blue: #0A84FF;
+    --color-apple-graylight: #E5E5EA;
+    --color-apple-gray: #D1D1D6;
+    --color-apple-graydark: #AEAEB2;
+    --color-apple-white: #FCFCFC;
+    --color-apple-black: #010101;
+}
