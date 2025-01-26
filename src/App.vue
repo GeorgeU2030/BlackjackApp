@@ -1,5 +1,10 @@
 <template>
-<div class="min-h-screen bg-apple-white">
-<h1 class="text-apple-blue text-4xl">Hola Mundo</h1>
-</div>
+  <div id="app">
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/login">Login</router-link>
+      <router-link to="/register">Register</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
