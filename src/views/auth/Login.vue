@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { useAuthStore } from '@/store/auth';
+
 export default {
   data() {
     return {
@@ -46,6 +48,10 @@ export default {
       reason: '',
       apiurl: import.meta.env.VITE_API_URL
     };
+  },
+  setup() {
+    const authStore = useAuthStore();
+    return { authStore };
   },
   methods: {
     async handleLogin() {
@@ -62,9 +68,14 @@ export default {
         });
         
         const data = await response.json();
+        
+        if (!response.ok) throw new Error(data.reason || 'Login failed');
+        
+        this.authStore.login(data.user, data.token);
+        
         if (response.ok) {
           localStorage.setItem('token', data.token);
-          this.$router.push('/');
+          this.$router.push('/home');
         } else {
           this.reason = data.reason;
         }
