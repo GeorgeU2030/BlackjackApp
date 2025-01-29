@@ -13,7 +13,7 @@ import LandingImage from '@/assets/images/landing.webp';
       The most fun way to play Blackjack
     </h2>
     
-    <section class="p-6 w-1/3 mt-4 bg-apple-gray rounded-xl border border-apple-red shadow-lg">
+    <section class="p-6 w-11/12 lg:w-1/3 mt-4 bg-apple-gray rounded-xl border border-apple-red shadow-lg">
       <img :src="LandingImage" alt="Blackjack preview" class="w-full h-80 rounded-xl"/>
     </section>
     
@@ -32,7 +32,7 @@ import LandingImage from '@/assets/images/landing.webp';
       </router-link>
     </section>
     
-    <p class="text-center text-apple-black w-1/3 mt-4">
+    <p class="text-center text-apple-black w-5/6 lg:w-1/3 mt-4">
       Enjoy the classic card game from anywhere. Compete against other players, climb the rankings and test your Blackjack skills.
     </p>
     
