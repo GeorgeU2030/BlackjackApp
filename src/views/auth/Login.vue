@@ -75,8 +75,6 @@ export default {
         
         const data = await response.json();
         
-        if (!response.ok) throw new Error(data.reason || 'Login failed');
-        
         this.authStore.login(data.user, data.token);
         
         if (response.ok) {

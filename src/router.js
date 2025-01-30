@@ -4,12 +4,14 @@ import Landing from './views/Landing.vue'
 import Login from './views/auth/Login.vue'
 import Register from './views/auth/Register.vue'
 import Home from './views/Home.vue'
+import Game from './views/Game.vue'
 
 const routes = [
   { path: '/', component: Landing },
   { path: '/login', component: Login },
   { path: '/register', component: Register },
-  { path: '/home', component: Home, meta: { requiresAuth: true } }
+  { path: '/home', component: Home, meta: { requiresAuth: true } },
+  { path: '/game', component: Game, meta: { requiresAuth: true } }
 ]
 
 const router = createRouter({
